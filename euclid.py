@@ -5,7 +5,7 @@ b = input("b の値を入力: ")
 a_int = int(a)
 b_int = int(b)
 
-while b_int != 0:  # bが0になるまでループ
+while b_int != 0:  
     c = a_int % b_int
     a_int = b_int
     b_int = c
