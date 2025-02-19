@@ -5,32 +5,36 @@ b = input("bの値を入力: ")
 a_int = int(a)
 b_int = int(b)
 
-if a_int < 2 :
-   print("素数ではありません。")
-if a_int == 2:
-    print("素数です。")
-if a_int % 2 == 0:
-    print("素数ではありません。")  
+def judge (n):
+    if a_int < 1 or b_int < 1:
+        print("0以上の値を入力してください。")
+        exit(1)
+    elif isinstance(a_int, float) or isinstance(b_int, float):
+        print("正の数を入力してください。")
+        exit(1)
+    if n < 2 :
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
     
-i = 3
-while i * i <= a_int:
-    if a_int % i == 0:
-        print("素数ではありません。")
-    i += 2
-print("素数です。")
-
-if b_int < 2 :
-   print("素数ではありません。")
-if b_int == 2:
-    print("素数です。")
-if b_int % 2 == 0:
-    print("素数ではありません。")  
-else:
     i = 3
-    while i * i <= b_int:
-        if b_int % i == 0:
-            print("素数ではありません。")
-        break
+    while i * i <= n:
+        if n % i == 0:
+            return False
         i += 2
-    else:
+    return True
+
+result_a = judge(a_int)
+result_b = judge(b_int)
+
+def output (n):
+    if n:
         print("素数です。")
+    else:
+        print("素数ではありません。")
+
+output(result_a)    
+output(result_b)
+
