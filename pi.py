@@ -4,6 +4,7 @@ text = """
 """
 
 # TODO
+
 clean_text = text.replace(",", "").replace(".", "")
 
 words = clean_text.split()
