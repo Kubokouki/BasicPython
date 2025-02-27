@@ -4,11 +4,12 @@ text = """
 """
 
 # TODO
-
 clean_text = text.replace(",", "").replace(".", "")
 
 words = clean_text.split()
 
-result = ''.join(str(len(word)) for word in words)
+numbers = (list(map(len,(words))))
 
-print(result)
+clean_numbers = "".join(map(str, numbers))
+
+print(clean_numbers)
