@@ -3,6 +3,7 @@ from math import sin
 # print(sin(0))
 # >>> 0
 # -----------
+
 s = 0
 i = 0
 h = (1/2)*3.141592/100 

@@ -5,6 +5,7 @@ b = input("bの値を入力: ")
 a_int = int(a)
 b_int = int(b)
 
+
 if a_int < 2 :
    print("素数ではありません。")
 if a_int == 2:
@@ -18,6 +19,7 @@ while i * i <= a_int:
         print("素数ではありません。")
     i += 2
 print("素数です。")
+
 
 if b_int < 2 :
    print("素数ではありません。")
